@@ -1,4 +1,4 @@
-<?php
+<?
 
 // $NS=array('8.8.8.8');
 // $dns_NS_array=dns_get_record("www.google.com", DNS_ALL, $NS);
