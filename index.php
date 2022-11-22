@@ -31,8 +31,8 @@ $ips = array();
 if(preg_match_all('/Address: ((?:\d{1,3}\.){3}\d{1,3})/', $ip, $match) > 0){
     $ips = $match[1];
 }
+print_r($host);
 print_r($ips);
-
 
 $host = 'www.yoichiozaki.com';
 $dns = '8.8.8.8';
@@ -41,4 +41,15 @@ $ips = array();
 if(preg_match_all('/Address: ((?:\d{1,3}\.){3}\d{1,3})/', $ip, $match) > 0){
     $ips = $match[1];
 }
+print_r($host);
+print_r($ips);
+
+$host = 'www.yahoo.com';
+$dns = '8.8.8.8';
+$ip = `nslookup $host $dns`; // the backticks execute the command in the shell
+$ips = array();
+if(preg_match_all('/Address: ((?:\d{1,3}\.){3}\d{1,3})/', $ip, $match) > 0){
+    $ips = $match[1];
+}
+print_r($host);
 print_r($ips);
